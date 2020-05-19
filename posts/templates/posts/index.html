@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Clone-Facebook</title>
+</head>
+<body>
+    <h1> {{ vPass }}</h1>
+    <div class="post-wrap">
+        <h3>게시글</h3>
+    <!-- 게시글 존재하는 경우 Loop -->
+        <div class="post-card">
+            <div class="post-author">
+                <p>김아무개님의 게시글</p>
+            </div>
+            <div class="post-content">
+                <p>오늘 회식각~~~</p>
+            </div>
+            <!-- 댓글요소 존재하는 경우 Loop -->
+            <div class="post-reply">
+                <p><span class="reply-name">김영석 :</span> <span   class="reply-content">뭐하느아? 클론코딩하나~?</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

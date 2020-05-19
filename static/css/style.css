@@ -1,0 +1,54 @@
+html{
+    font-family: "noto Sans KR";
+}
+
+body {
+    
+    background-color: #232323;
+    color: white;
+}
+
+
+.cardLogin {
+    margin: auto;
+    width: 50%;
+    max-width: 450px;
+}
+
+
+.login{
+    width: 100%;
+    
+    margin: auto;
+    box-sizing : border-box;
+    padding: 0px 10px;
+    height: 42px;
+}
+
+.btn{
+    color: #000000;
+    margin: auto;
+    width: 100%;
+    background-color: #888888;
+    text-align: left;
+    border-style: solid;
+    border-color: #999999;
+    font-weight: bold;
+}
+
+.post-wrap {
+    padding: 0.825rem;
+    max-width: 476px;
+    width:100%;
+    margin: auto;
+}
+
+.post-author, .post-content, .post-reply {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.post-content {
+    min-height: 238px;
+}
+
