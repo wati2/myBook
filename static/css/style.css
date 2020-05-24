@@ -4,7 +4,8 @@ html{
 
 body {
     
-    background-color: #232323;
+    /* background-color: #232323; */
+    background-color: #000000;
     color: white;
 }
 
@@ -36,6 +37,8 @@ body {
     font-weight: bold;
 }
 
+
+
 .post-wrap {
     padding: 0.825rem;
     max-width: 476px;
@@ -47,20 +50,31 @@ body {
     margin: auto 0;
 }
 
+.post-card {
+    margin-bottom: 15px;
+}
+
+.post-author, .post-content, .post-reply, .post-reply-in-reply, .post-like{
+    background-color: #333333;
+    padding: 10px;
+    width: auto;
+    border: 1px solid white;
+}
+
 .post-author, .reply-name{
     font-weight: 700;
     color: #5075ee;
 }
 
-.post-author, .post-content, .post-reply, .post-reply-in-reply {
-    padding: 0.5em;
-    width: 100%;
-    border: 1px solid white;
+
+.post-like{
+    font-size: 14px;
+    color: white;
 }
 
 .post-author, .post-reply, .post-reply-in-reply {
     font-size: 14px;
-    height: 24px;
+    height: 1.25em;
 }
 
 .post-reply-in-reply > p{
