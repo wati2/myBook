@@ -43,9 +43,28 @@ body {
     margin: auto;
 }
 
-.post-author, .post-content, .post-reply {
+.post-wrap p {
+    margin: auto 0;
+}
+
+.post-author, .reply-name{
+    font-weight: 700;
+    color: #5075ee;
+}
+
+.post-author, .post-content, .post-reply, .post-reply-in-reply {
+    padding: 0.5em;
     width: 100%;
     border: 1px solid white;
+}
+
+.post-author, .post-reply, .post-reply-in-reply {
+    font-size: 14px;
+    height: 24px;
+}
+
+.post-reply-in-reply > p{
+    margin-left: 1em;
 }
 
 .post-content {
