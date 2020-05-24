@@ -20,13 +20,16 @@
         {% for post in posts %}
 
         <div class="post-card">
-
+            <!-- 작성자 -->
             <div class="post-author">
                 <p>{{ post.userId }} <span id="date-post">{{ post.date }}</span></p>
             </div>
+            <!-- 내용 -->
             <div class="post-content">
                 <p>{{ post.contents }}</p>
             </div>
+            <!-- 좋아요 -->
+            <p class="post-like">좋아요 {{ post.like }}</p>
 
             <!-- 댓글요소 존재하는 경우 Loop -->
             {% for reply in replys %}
