@@ -36,6 +36,8 @@ def index(request):
     replys.append({'replyId':5,'postId':1, 'commentsOrder':1, 'commentsInOrder':2, 'contents':'담에ㄱ?', 'time':'12:05', 'userId':'wati2'})
     replys.append({'replyId':2,'postId':1, 'commentsOrder':2, 'commentsInOrder':0, 'contents':'양ㄷㄷ', 'time':'12:02', 'userId':'iqjumps'})
     replys.append({'replyId':3,'postId':1, 'commentsOrder':3, 'commentsInOrder':0, 'contents':'비주얼ㄷㄷ', 'time':'12:03', 'userId':'ajrqhxn'})
+    replys.append({'replyId':6,'postId':2, 'commentsOrder':3, 'commentsInOrder':0, 'contents':'냠냠', 'time':'12:03', 'userId':'ajrqhxn'})
+    replys.append({'replyId':7,'postId':2, 'commentsOrder':3, 'commentsInOrder':0, 'contents':'뇸뇸', 'time':'12:03', 'userId':'yskim'})
     # context에 dictionary 키, 밸류 추가
     context['replys'] = replys
 
