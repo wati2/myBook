@@ -10,22 +10,55 @@
     <title>Clone-Facebook</title>
 </head>
 <body>
-    <h1> {{ vPass }}</h1>
+        
     <div class="post-wrap">
+        <hr>
         <h3>게시글</h3>
-    <!-- 게시글 존재하는 경우 Loop -->
+        <hr>
+
+        <!-- 게시글 존재하는 경우 Loop -->
+        {% for post in posts %}
+
         <div class="post-card">
+
             <div class="post-author">
-                <p>김아무개님의 게시글</p>
+                <p>{{ post.userId }} <span id="date-post">{{ post.date }}</span></p>
             </div>
             <div class="post-content">
-                <p>오늘 회식각~~~</p>
+                <p>{{ post.contents }}</p>
             </div>
+
             <!-- 댓글요소 존재하는 경우 Loop -->
-            <div class="post-reply">
-                <p><span class="reply-name">김영석 :</span> <span   class="reply-content">뭐하느아? 클론코딩하나~?</span></p>
-            </div>
+            {% for reply in replys %}
+                {% if post.postId == reply.postId %}
+                    {% if reply.commentsInOrder == 0 %}
+                    <div class="post-reply">
+                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.contents }}</span></p>
+                    </div>
+                    {% else %}
+                    <div class="post-reply-in-reply">
+                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.contents }}</span></p>
+                    </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <br>
         </div>
+
+        {% endfor %}
+
+        <!-- 테스트! -->
+        <hr>
+        <h1>TEST</h1>
+        <hr>
+        {% for list_item in list_of_values %}
+            {{ list_item }}<br>
+        {% endfor %}
+
+        {% for post in posts %}
+            {{ post.userId }}<br>
+        {% endfor %}
+        
     </div>
 
 </body>
