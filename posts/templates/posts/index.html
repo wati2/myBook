@@ -22,11 +22,11 @@
         <div class="post-card">
             <!-- 작성자 -->
             <div class="post-author">
-                <p>{{ post.userId }} <span id="date-post">{{ post.date }}</span></p>
+                <p>{{ post.owner }} <span id="date-post">{{ post.date }}</span></p>
             </div>
             <!-- 내용 -->
             <div class="post-content">
-                <p>{{ post.contents }}</p>
+                <p>{{ post.content }}</p>
             </div>
             <!-- 좋아요 -->
             <p class="post-like">좋아요 {{ post.like }}</p>
@@ -36,32 +36,19 @@
                 {% if post.postId == reply.postId %}
                     {% if reply.commentsInOrder == 0 %}
                     <div class="post-reply">
-                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.contents }}</span></p>
+                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
                     </div>
                     {% else %}
                     <div class="post-reply-in-reply">
-                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.contents }}</span></p>
+                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
                     </div>
                     {% endif %}
                 {% endif %}
             {% endfor %}
             <br>
         </div>
-
         {% endfor %}
 
-        <!-- 테스트! -->
-        <hr>
-        <h1>TEST</h1>
-        <hr>
-        {% for list_item in list_of_values %}
-            {{ list_item }}<br>
-        {% endfor %}
-
-        {% for post in posts %}
-            {{ post.userId }}<br>
-        {% endfor %}
-        
     </div>
 
 </body>
