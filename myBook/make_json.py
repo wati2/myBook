@@ -1,5 +1,6 @@
 from posts.models import post_table, user_table, comment_table
 from django.http import JsonResponse #장고에서 json 형식 사용할때 필요
+#데이터 가져오기
 
 def make_json_data():
      #포스트, 댓글용 딕셔너리
