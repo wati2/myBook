@@ -1,7 +1,9 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from django.http import HttpResponse
 
+<<<<<<< HEAD
 def index(request):
     # 템플릿 호출 
     template = loader.get_template('posts/index.html')
@@ -24,3 +26,9 @@ def index(request):
     return HttpResponse(template.render(context,request))
 
 
+=======
+# Create your views here.
+
+def index(request):
+    return HttpResponse("hello")
+>>>>>>> JISEONGDEV
