@@ -36,11 +36,11 @@
                 {% if post.postId == reply.postId %}
                     {% if reply.commentsInOrder == 0 %}
                     <div class="post-reply">
-                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
+                        <p><span class="reply-name">{{ reply.commentsInOrder }} {{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
                     </div>
                     {% else %}
                     <div class="post-reply-in-reply">
-                        <p><span class="reply-name">{{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
+                        <p><span class="reply-name">{{ reply.commentsInOrder }} {{ reply.userId }} </span><span class="reply-content">{{ reply.content }}</span></p>
                     </div>
                     {% endif %}
                 {% endif %}

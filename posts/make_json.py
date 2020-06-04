@@ -1,5 +1,6 @@
 from posts.models import post_table, user_table, comment_table
 from django.http import JsonResponse #장고에서 json 형식 사용할때 필요
+
 #데이터 가져오기
 
 def make_json_data():
@@ -42,10 +43,11 @@ def make_json_data():
         subDict['date'] = c_data.make_date
         subDict['content'] = c_data.comment_data
         subDict['userId'] = c_data.comment_owner
+        subDict['postId'] = c_data.post_id
         commentList.append(subDict)
         subDict = {}
 
-    all_dicData['post'] = postList
+    all_dicData['posts'] = postList
     all_dicData['replys'] = commentList
     # return JsonResponse(postDict)
     return all_dicData
